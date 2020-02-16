@@ -23,7 +23,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = 'zd9#qt=d41_$18lqf4+ua!h*rtoz3re*0%&49o7*8dspny9kud'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://jonaskleinanzeigen.herokuapp.com/']
 
