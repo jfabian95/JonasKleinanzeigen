@@ -8,10 +8,10 @@ def home(request):
 
 def new_search(request):
     search = request.POST.get('search')
-    place = request.POST.get('place')
-
+    response = requests.get(f'https://www.ebay-kleinanzeigen.de/s-berlin/{search}/k0l3331')
+    data = response.text
+    print(data)
     context = {
-        'search': search,
-        'place': place
+        'search': search
     }
     return render(request, 'my_app/new_search.html',context)

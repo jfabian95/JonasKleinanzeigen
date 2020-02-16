@@ -49,7 +49,6 @@
 
                 <form action="{% url 'new_search' %}" method="POST">{% csrf_token %}
                     <input type="text" name="search" placeholder="Suche">
-                    <input type="text" name="place" placeholder="PLZ oder Ort">
                     <button class="btn waves-effect waves-light" type="submit" name="action">Senden
                         <i class="material-icons right">send</i>
                       </button>
