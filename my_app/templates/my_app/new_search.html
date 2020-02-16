@@ -1,20 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
    <h2 style="text-align: center;">{{ search | title }}</h2> 
+
    <div class="row"> 
+    {% for post in postings %}
         <div class="col s4">
-            <div class="card">
-            <div class="card-image">
-                <img src="https://i.pinimg.com/originals/75/0e/05/750e05d9867e02ce0ba641e1e2030bc5.jpg">
-            </div>
-            <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <a href="#">This is a link</a>
-            </div>
+            <div class="card large">
+                <div class="card-image">
+                    <a href="https://www.ebay-kleinanzeigen.de/{{ post.1 }}"><img src="{{ post.3 }}"></a>
+                </div>
+                <div class="card-content">
+                    <p style="font-weight: bold;">{{ post.0 }}</p>
+                    <p>{{ post.2 }}</p>
+                    <p style="font-weight: bold;">{{ post.4 }}</p>
+                </div>
+                <div class="card-action">
+                    <a href="https://www.ebay-kleinanzeigen.de/{{ post.1 }}">{{ post.0 }}</a>
+                  </div>           
             </div>
         </div>
+        {% endfor %}
    </div>
 {% endblock content %}
