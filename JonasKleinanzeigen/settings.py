@@ -25,7 +25,7 @@ SECRET_KEY = 'zd9#qt=d41_$18lqf4+ua!h*rtoz3re*0%&49o7*8dspny9kud'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://jonaskleinanzeigen.herokuapp.com/']
 
 
 # Application definition
